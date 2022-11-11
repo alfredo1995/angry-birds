@@ -1,5 +1,9 @@
 Angry Bomb é um jogo de física, assim como os seus antecessores (Angry Birds), no qual seu objetivo é eliminar pássaros amarelos e destruir suas construções ao arremessar bombas contra elas.
 
+Os "papeis" se inverteram, e agora é o "Birds" que está sendo eliminado!
+
+Use o mouse para arremessar as bombas, clicando no meio do estilingue!
+
 
 run game: 
 
