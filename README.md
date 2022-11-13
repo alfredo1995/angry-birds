@@ -5,7 +5,7 @@ Os "papeis" se inverteram, e agora é o "Birds" que está sendo eliminado!
 Use o mouse para arremessar as bombas, clicando no meio do estilingue!
 
 
-run game: 
+run game: https://alfredo1995.itch.io/angry-bomb
 
 <br>
 
