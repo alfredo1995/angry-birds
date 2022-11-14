@@ -532,3 +532,48 @@ criar um mecanismo de disparo de passaro
             arraste os objetos para cena > posicione os objeto na cena e orden in layer para 5
             adicione um rigibory 2D nos objetos 
             para que os objetos nao caia adicione o componente > polygon Collider 2D
+            
+<br>            
+ADICIONANDO UM CONTADOR DE BOLA PARA CHAMAR A TELA DE GAME OVER
+   <br>
+   using UnityEngine.SceneManagement;
+   using UnityEngine;
+
+   private int quantidadeDeBolas; //<============= ALTERAÇÕES
+
+   void Start()
+   {
+       quantidadeDeBolas = 5; //<============= ALTERAÇÕES    
+
+
+       void AitrarBolas()
+       {
+           if (quantidadeDeBolas > 0)//<============= ALTERAÇÕES
+           {
+               if (bola == null)
+               {
+                   return;
+               }
+               else
+               {
+                   quantidadeDeBolas--;
+
+                   bola.isKinematic = false;
+                   Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
+                   //bola.velocity = bolaForce;
+                   bola.AddForce(bolaForce, ForceMode2D.Impulse);
+
+                   bola.GetComponent<Bola>().BolaInicializada();
+
+                   bola = null;
+                   bolaColide = null;
+                   Invoke("CriarBolas", 2);
+               }
+           }
+           else if (quantidadeDeBolas <= 0) //<============= ALTERAÇÕES
+           {
+               //CHAMAR TELA DE GAME OVER
+               SceneManager.LoadScene("GameOver");
+
+           }
+       }
