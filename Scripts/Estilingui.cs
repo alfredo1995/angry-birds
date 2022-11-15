@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Estilingui : MonoBehaviour
 {
+    private int quantidadeDeBolas; //<============= ALTERAÇÕES CONTADOR DISPARDO, CHAMANDO TELA DE GAMEOVER
+
     public LineRenderer[] faixas;
     public Transform[] pontasFaixa;
     public Transform faixaParada;
@@ -28,6 +31,8 @@ public class Estilingui : MonoBehaviour
     public float force;
     void Start()
     {
+        quantidadeDeBolas = 11; //<============= ALTERAÇÕES
+
         faixas[0].positionCount = 2;
         faixas[1].positionCount = 2;
         faixas[0].SetPosition(0, pontasFaixa[0].position);
@@ -56,6 +61,7 @@ public class Estilingui : MonoBehaviour
             mousePosition.z = 10;
 
             extremidadeFaixa = Camera.main.ScreenToWorldPoint(mousePosition);
+
             extremidadeFaixa = faixaCentro.position + Vector3.ClampMagnitude(extremidadeFaixa - faixaCentro.position, tamanhoFaixa);
 
             FaixaPosicoes(extremidadeFaixa);
@@ -84,22 +90,34 @@ public class Estilingui : MonoBehaviour
     }
     void AitrarBolas()
     {
-        if(bola == null)
+        if (quantidadeDeBolas > 0)//<============= ALTERAÇÕES
         {
-            return;
+            if (bola == null)
+            {
+                return;
+            }
+            else
+            {
+                quantidadeDeBolas--;
+
+                bola.isKinematic = false;
+                Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
+                //bola.velocity = bolaForce;
+                bola.AddForce(bolaForce, ForceMode2D.Impulse);
+
+                bola.GetComponent<Bola>().BolaInicializada();
+
+                bola = null;
+                bolaColide = null;
+                Invoke("CriarBolas", 2);
+            }
         }
-        bola.isKinematic = false;
-        Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
-        //bola.velocity = bolaForce;
-        bola.AddForce(bolaForce, ForceMode2D.Impulse);
+        else if (quantidadeDeBolas <= 0) //<============= ALTERAÇÕES
+        {
+            //CHAMAR TELA DE GAME OVER
+            SceneManager.LoadScene("GameOver");
 
-        bola.GetComponent<Bola>().BolaInicializada();
-
-        bola = null;
-        bolaColide = null;
-        Invoke("CriarBolas", 2);
-
-
+        }
     }
     void ResetarPosicao()
     {
