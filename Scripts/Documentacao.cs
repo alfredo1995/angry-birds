@@ -1,4 +1,4 @@
-﻿//using UnityEngine;
+//using UnityEngine;
 
 //run game: 
 
@@ -9,11 +9,11 @@
 //< br >
 
 //1) Novo projeto 
-            
+
 //            crie um template do tipo 2D
 
 //2) Importar os assets
-            
+
 //            faça o download dos assets nesse repositorio
 
 //3) Plano de fundo do jogo
@@ -24,55 +24,55 @@
 
 //            no estilingue0 > Ordene in layer para 3
 //            no estilingue1 > Ordene in layer para 1
-      
+
 //            Anexar o estilingue0 como filho do estilingue1 (Tornado um só objeto)
 //            Resertar a posição dos objetos no componente tranform ao adiciona-los a cena
-            
+
 //5) Criar um Empty Object e nomei p/ Estilingue
 
 //           trazer o estilingue0e1, p/ dentro desse Empty Object vazio Estilingue
-           
+
 //6) Criar os objetos que vão receber o componente de renderização de linha
-            
+
 //            //Dentro Object Estilingue que está armazendo todos os objetos refrente ao estilingue
-            
+
 //            Create > Empty object > effects > line > nomei para faixa0
 //            Create > Empty object > effects > line > nomei para faixa1
-            
+
 //7) Criar os objetos que vão defini a posição entre as faixas de tiras do estilingui
-            
+
 //            //Dentro Object Estilingue que está armazendo todos os objetos refrente ao estilingue
 
 //            Create > Empty object > nomei para PosicaoFaixaCentro
 //            posicione o objeto PosicaoFaixaCentro no centro superior entre o vao do Estilingue
-            
+
 //            Create > Empty object > nomei para PosicaoFaixaParada
 //            posicione o objeto PosicaoFaixaParada no centro a esquerda do estilingui 
-            
+
 //8) Criar os objetos que vão defini a posição das pontas da faixas de tiras do estilingui
-            
+
 //            //Dentro Object Estilingue que está armazendo todos os objetos refrente ao estilingue
 
 //            Create > Empty object > nomei para PosicaoPontaFaixa0
 //            posicione o objeto PosicaoPontaFaixa0 na ponta a esquerda do estilingui 
-            
+
 //            Create > Empty object > nomei para PosicaoPontaFaixa1
 //            posicione o objeto PosicaoPontaFaixa0 na ponta a direita do estilingui 
-            
+
 //            Certifique que todos os objetos criados estão dentro do Objeto Estiligui            
 //<br>
 
 //LineRenderer tem uma matriz de dois ou mais pontos no espaço 3D, serve p/ desenhar uma simples linha reta
 
 //<br>
-            
+
 //9) Criar uma pasta e nomei para scripts 
 
 //            Dentro da pasta scripts > Crie um novo script c# e nomei para Estiligui.cs            
 //            Arrast e conecte o script no Objecto Estiligui que esta armazendo todos os componentes
-            
+
 //10) Abra o script Estiligui.cs e crie um componenteRenderer que tem um array(matriz)            
-            
+
 //            // Crie uma variavel public p/ armezar os elementos da matriz do tipo LineRenderer            
 //                        public LineRenderer[] faixas;
 
@@ -95,7 +95,7 @@
 //    public Transform faixaCentro;
 
 //    bool mousePrecionado;
-                
+
 //12) Definir a contagem e posição dos renderizadores de linha no metodo de inicialização
 
 //            //defina a contagem de ambos redenizador para 2 (positionCount)
@@ -109,7 +109,7 @@
 //        faixas[1].SetPosition(0, pontasFaixas[1].position);
 
 //        13) Crie um metódo para redefinir e definir a faixa atráves de um paramêtro do tipo Vector3
-        
+
 //            //Vector3 usada em toda a Unidade para passar posições e direções 3D ao redor
 
 //                    void FaixaPosicoes(Vector3 position)
@@ -231,7 +231,7 @@
 //23) criar um Vector3 de tres posição atuais que armazene a extremidade da faixa
 
 //            public Vector3 extremidadeFaixa;
-            
+
 //24) Ponto mudial extremidadeFaixa p/ a posição atual do(mousePostion) passando como argumento p/ DefinirPosicaoFaixas
 
 //            void Update()
@@ -257,7 +257,7 @@
 //        26) crieu um novo link flutuante que armazene o comprimento maximo da faixa
 
 //            public float maxLength;
-            
+
 //27) Defina a posição atual da extremidadeFaixa no metodo de atualização
 
 
@@ -269,10 +269,10 @@
 //                {
 //                   extremidadeFaixa = Camera.main.ScreenToWorldPoint(mousePosition);
 //                   extremidadeFaixa = faixaCentro.position + Vector3.ClampMagnitude(extremidadeFaixa - faixaCentro.position, maxLength);
-                
-                
+
+
 //            //voltando na unity no inspector do estilingui > estilingui.cs > defini o Max Length para 3
-            
+
 //28) Limitar o elastico do estilingui ate o solo
 
 //            public float tamanhoFaixaSolo;
@@ -336,12 +336,12 @@
 //35) Abra o script Estiligui crie um novo objeto bird prefab no topo do codigo
 
 //            public GameObject passaroPrefabs;
-            
+
 //34) Crie um passaro do tipo Rigibody e um passarocollisor para o tipo Collider
 
 //            Rigidbody2D passaro;
 //            Collider2D passaroCollider;
-            
+
 //36) crie um novo metodo para instaciar novos passaro(player)
 
 //            void CriarPassaros()
@@ -363,7 +363,7 @@
 //            38) crie uma vairavel public do tipo float para o deslocamento da passaro no topo do script
 
 //            public float posicaoDeslocamentoPassaro;
-            
+
 //39) No metodo DefinirPosicaoFaixas, crie um novo vector3 dir recebendo a posição menos PosicaoCentroFaixa
 
 //            // defina a posição do passaro p/ position e normalize a direção multiplicando pelo deslocamento do passaro
@@ -395,7 +395,7 @@
 //        }
 
 //        41) No metodo start inicialize o metodo de criação do passaro
-        
+
 
 //                    void Start()
 //            {
@@ -418,7 +418,7 @@
 //43) Adicionar uma varivel float no topo do script
 
 //            public float force; 
-            
+
 //44) criar um novo metodo para atirar e chame no metodo OnMouseUp
 
 //            void AtirarPassaro()
@@ -436,7 +436,7 @@
 
 //        extremidadeFaixa = FaixaParada.position;
 //    }
-            
+
 //45) No metodo AtirarPassaro
 
 //            // crie um vector3 chamando a força do passaro 
@@ -670,3 +670,81 @@
 //        //    return vector;
 //        //}
 //    }
+
+
+
+
+//ADICIONANDO UM CONTADOR DE BOLA PARA CHAMAR A TELA DE GAME OVER
+
+//using UnityEngine.SceneManagement;
+//using UnityEngine;
+
+//private int quantidadeDeBolas; //<============= ALTERAÇÕES
+
+//void Start()
+//{
+//    quantidadeDeBolas = 5; //<============= ALTERAÇÕES    
+
+
+//    void AitrarBolas()
+//    {
+//        if (quantidadeDeBolas > 0)//<============= ALTERAÇÕES
+//        {
+//            if (bola == null)
+//            {
+//                return;
+//            }
+//            else
+//            {
+//                quantidadeDeBolas--;
+
+//                bola.isKinematic = false;
+//                Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
+//                //bola.velocity = bolaForce;
+//                bola.AddForce(bolaForce, ForceMode2D.Impulse);
+
+//                bola.GetComponent<Bola>().BolaInicializada();
+
+//                bola = null;
+//                bolaColide = null;
+//                Invoke("CriarBolas", 2);
+//            }
+//        }
+//        else if (quantidadeDeBolas <= 0) //<============= ALTERAÇÕES
+//        {
+//            //CHAMAR TELA DE GAME OVER
+//            SceneManager.LoadScene("GameOver");
+
+//        }
+//    }
+
+
+
+
+
+
+//Chamando as cenas atraves de index
+
+
+
+//using UnityEngine.SceneManagement;
+
+//private int nextSceneToLoad;
+
+//public void Start()
+//{
+//    nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+//}
+
+//public void ContadorBloco()
+//{
+//    contadorNumero++;
+
+//    if (contadorNumero >= passaroIndex)
+//    {
+//        SceneManager.LoadScene(nextSceneToLoad);
+//        //SceneManager.LoadScene("Cena1");
+
+//    }
+//    contadoTexto.text = "PASSAROS : " + contadorNumero;
+//}
