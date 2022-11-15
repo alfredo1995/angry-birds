@@ -577,3 +577,29 @@ ADICIONANDO UM CONTADOR DE BOLA PARA CHAMAR A TELA DE GAME OVER
 
            }
        }
+
+<br>
+
+Chamando as cenas atraves de index
+
+<br>
+       
+      private int nextSceneToLoad;
+
+      public void Start()
+      {
+          nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+      }
+
+      public void ContadorBloco()
+      {
+          contadorNumero++;
+
+        if (contadorNumero >= passaroIndex)
+        {
+            SceneManager.LoadScene(nextSceneToLoad);
+            //SceneManager.LoadScene("Cena1");
+
+        }
+            contadoTexto.text = "PASSAROS : " + contadorNumero;
+        }
