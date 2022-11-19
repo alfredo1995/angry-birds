@@ -535,48 +535,49 @@ criar um mecanismo de disparo de passaro
             
 <br>            
 ADICIONANDO UM CONTADOR DE BOLA PARA CHAMAR A TELA DE GAME OVER
-   <br>
-   using UnityEngine.SceneManagement;
-   using UnityEngine;
+<br>
 
-   private int quantidadeDeBolas; //<============= ALTERAÇÕES
+        using UnityEngine.SceneManagement;
+        using UnityEngine;
 
-   void Start()
-   {
-       quantidadeDeBolas = 5; //<============= ALTERAÇÕES    
+        private int quantidadeDeBolas; //<============= ALTERAÇÕES
+
+        void Start()
+        {
+            quantidadeDeBolas = 5; //<============= ALTERAÇÕES    
 
 
-       void AitrarBolas()
-       {
-           if (quantidadeDeBolas > 0)//<============= ALTERAÇÕES
-           {
-               if (bola == null)
-               {
-                   return;
-               }
-               else
-               {
-                   quantidadeDeBolas--;
+            void AitrarBolas()
+            {
+                if (quantidadeDeBolas > 0)//<============= ALTERAÇÕES
+                {
+                    if (bola == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        quantidadeDeBolas--;
 
-                   bola.isKinematic = false;
-                   Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
-                   //bola.velocity = bolaForce;
-                   bola.AddForce(bolaForce, ForceMode2D.Impulse);
+                        bola.isKinematic = false;
+                        Vector3 bolaForce = (extremidadeFaixa - faixaCentro.position) * force * -1;
+                        //bola.velocity = bolaForce;
+                        bola.AddForce(bolaForce, ForceMode2D.Impulse);
 
-                   bola.GetComponent<Bola>().BolaInicializada();
+                        bola.GetComponent<Bola>().BolaInicializada();
 
-                   bola = null;
-                   bolaColide = null;
-                   Invoke("CriarBolas", 2);
-               }
-           }
-           else if (quantidadeDeBolas <= 0) //<============= ALTERAÇÕES
-           {
-               //CHAMAR TELA DE GAME OVER
-               SceneManager.LoadScene("GameOver");
+                        bola = null;
+                        bolaColide = null;
+                        Invoke("CriarBolas", 2);
+                    }
+                }
+                else if (quantidadeDeBolas <= 0) //<============= ALTERAÇÕES
+                {
+                    //CHAMAR TELA DE GAME OVER
+                    SceneManager.LoadScene("GameOver");
 
-           }
-       }
+                }
+            }
 
 <br>
 
