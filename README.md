@@ -533,8 +533,10 @@ criar um mecanismo de disparo de passaro
             adicione um rigibory 2D nos objetos 
             para que os objetos nao caia adicione o componente > polygon Collider 2D
             
-<br>            
+<br>   
+
 ADICIONANDO UM CONTADOR DE BOLA PARA CHAMAR A TELA DE GAME OVER
+
 <br>
 
         using UnityEngine.SceneManagement;
