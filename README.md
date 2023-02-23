@@ -17,7 +17,7 @@ Configurando área do jogo
             
             crie um template do tipo 2D
 
-2) Importar os assets
+2) Importar os assets 
             
             faça o download dos assets nesse repositorio
 
