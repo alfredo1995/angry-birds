@@ -10,7 +10,7 @@ run game: https://alfredo1995.itch.io/angry-bomb
 <br>
 
 Configurando área do jogo
-
+ 
 <br>
  
 1) Novo projeto 
