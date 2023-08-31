@@ -14,7 +14,7 @@ Configurando área do jogo
 <br>
  
 1) Novo projeto 
-            
+             
             crie um template do tipo 2D
 
 2) Importar os assets 
