@@ -12,7 +12,7 @@ run game: https://alfredo1995.itch.io/angry-bomb
 Configurando área do jogo
  
 <br>
- 
+  
 1) Novo projeto 
              
             crie um template do tipo 2D
