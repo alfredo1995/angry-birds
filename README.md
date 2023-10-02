@@ -1,31 +1,28 @@
-Angry Bomb é um jogo de física, assim como os seus antecessores (Angry Birds), no qual seu objetivo é eliminar pássaros amarelos e destruir suas construções ao arremessar bombas contra elas.
+Angry Bomb is a physics game, like its predecessors (Angry Birds), in which your objective is to eliminate yellow birds and destroy their buildings by throwing bombs at them.
 
-Os "papeis" se inverteram, e agora é o "Birds" que está sendo eliminado!
+The "roles" have been reversed, and now it is the "Birds" who are being eliminated!
 
-Use o mouse para arremessar as bombas, clicando no meio do estilingue!
-
-
-run game: https://alfredo1995.itch.io/angry-bomb 
+Use the mouse to throw the bombs by clicking on the middle of the slingshot!
 
 <br>
 
-Configurando área do jogo
+Configuring game area
  
 <br>
   
-1) Novo projeto 
+1) New project
              
-            crie um template do tipo 2D
+             create a 2D template
 
-2) Importar os assets 
+2) Import the assets
             
-            faça o download dos assets nesse repositorio
+             Download the assets from this repository
 
-3) Plano de fundo do jogo
+3) Game background
 
-            Arraste o plano de fundo para cena e nomeie p/ "PlanoFundo"
+             Drag the background to the scene and name it "Background"
 
-4) Arraste as 2 parte do estilingue para hieraquia e posicione na scena
+4) Drag the 2 parts of the slingshot to the hierarchy and position it in the scene
 
             no estilingue0 > Ordene in layer para 3
             no estilingue1 > Ordene in layer para 1
