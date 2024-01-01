@@ -4,7 +4,7 @@ The "roles" have been reversed, and now it is the "Birds" who are being eliminat
 
 Use the mouse to throw the bombs by clicking on the middle of the slingshot!
 
-<br>
+<br> 
 
 Configuring game area
  
