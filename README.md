@@ -11,7 +11,7 @@ Configuring game area
 <br>
   
 1) New project
-             
+              
               create a 2D template
 
 2) Import the assets
