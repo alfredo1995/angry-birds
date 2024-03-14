@@ -19,7 +19,7 @@ Configuring game area
               Download the assets from this repository
 
 3) Game background
-
+ 
               Drag the background to the scene and name it "Background"
 
 4) Drag the 2 parts of the slingshot to the hierarchy and position it in the scene
