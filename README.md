@@ -1,6 +1,6 @@
 Angry Bomb is a physics game, like its predecessors (Angry Birds), in which your objective is to eliminate yellow birds and destroy their buildings by throwing bombs at them.
 
-The "roles" have been reversed, and now it is the "Birds" who are being eliminated!
+The "roles" have been reversed, and now it is the "Birds" who are being eliminated! 
 
 Use the mouse to throw the bombs by clicking on the middle of the slingshot!
 
