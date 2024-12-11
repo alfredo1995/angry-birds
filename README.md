@@ -8,7 +8,7 @@ Use the mouse to throw the bombs by clicking on the middle of the slingshot!
  
 Configuring game area
  
-<br>
+<br> 
   
 1) New project
               
